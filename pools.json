@@ -1,0 +1,68 @@
+[
+  {
+    "name": "PHX POS pool",
+    "adress": "cfx:acdj1y1r00mzvuw9s831rj1t5amst2405jv582syu0",
+    "link": "https://pospool.phxverse.com/",
+    "image": "https://pospool.phxverse.com/favicon.ico"
+  },
+  {
+    "name": "web-o-matic",
+    "adress": "cfx:acc5086t6uyww6barn1a2b6z8wdmdg376yeu9gczpz",
+    "image": "https://pos.webomatic.fi/favicon.ico",
+    "link": "https://pos.webomatic.fi/"
+  },
+  {
+    "name": "Concensus pool",
+    "adress": "cfx:acgx4fjs0knk1yfughrbyxgb3g1f0rgz82e7xnvm10",
+    "image": "https://gspos.club/favicon.ico",
+    "link": "https://gspos.club/pool/0x8d3d150eb2569bd0b031da1a4cc1c9ae5b34d5f6"
+  },
+  {
+    "name": "ABC pool",
+    "adress": "cfx:accpx9uxky39pg1hzav757vdej95w1kbcp13d0hvm7",
+    "image": "https://confluxpos.com/favicon.ico",
+    "link": "https://confluxpos.com/pool/0x84c9fe134d33f61ae7a823ddf623223fb95d2113"
+  },
+  {
+    "name": "HydraSF",
+    "adress": "cfx:acgwp9vmrp7rfd5keg2x69a8y88aw84uc2paasu7cu",
+    "image": "https://cfxmint.club/HydraSF-logo.ico",
+    "link": "https://cfxmint.club/"
+  },
+  {
+    "name": "Hydragon",
+    "adress": "cfx:acbpre1k49wyat9aew0dk8syz6du53c8bjjvs141mf",
+    "image": "https://www.hydragon.fun/favicon.ico",
+    "link": "https://www.hydragon.fun/"
+  },
+  {
+    "name": "CuanMax",
+    "adress": "0x874b44da0addd8acfbe018f82aab741b57e176f5",
+    "image": "https://www.cuanmax.net/favicon.ico",
+    "link": "https://www.cuanmax.net/"
+  },
+  {
+    "name": "Block Patch",
+    "adress": "cfx:acg8dkfxd88hdr5bgjf9p78mh32pemprbjn84beuhj",
+    "image": "https://www.block-patch.com/favicon.ico",
+    "link": "https://www.block-patch.com/"
+  },
+  {
+    "name": "StakingAfrica",
+    "adress": "cfx:acaxvc4kxk11r7d6tdbzub8j4gzy78ubxj5jt0zcyu",
+    "image": "https://www.stakingafrica.com/favicon.ico",
+    "link": "https://www.stakingafrica.com/"
+  },
+  {
+    "name": "Xiyou Pos Pool",
+    "adress": "cfx:acc3jrzrhujyuyhx2b19hmg2ed8m3852eyfk3sm3rb",
+    "image": "https://pos.xiyou.fi/favicon.ico",
+    "link": "https://pos.xiyou.fi/"
+  },
+  {
+    "name": "Always VIP",
+    "adress": "cfx:acc6sb694ch9k2ppym6v68gzvy6yyky3ses3wndm7m",
+    "image": "http://pos.always.vip/favicon.ico",
+    "link": "http://pos.always.vip/"
+  }
+]
