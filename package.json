@@ -32,7 +32,7 @@
     "dayjs": "^1.10.8",
     "js-conflux-sdk": "^2.0.3",
     "moment": "^2.29.1",
-    "next": "^10.0.3",
+    "next": "^12.1.0",
     "octokit": "^1.7.1",
     "opensea-js": "^1.2.8",
     "postcss": "^8.2.1",
