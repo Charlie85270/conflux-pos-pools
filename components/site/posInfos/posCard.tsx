@@ -17,7 +17,7 @@ export function PosCard({
 
         <p className="ml-2 text-black text-md dark:text-white">{title}</p>
       </div>
-      <div className="flex justify-start">
+      <div className="flex flex-col justify-start md:flex-row md:items-baseline">
         <p className="mt-4 mb-2 text-2xl font-bold text-left text-gray-700 dark:text-gray-100">
           {value}
         </p>
