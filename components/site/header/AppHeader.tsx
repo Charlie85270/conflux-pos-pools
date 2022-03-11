@@ -20,12 +20,12 @@ const AppHeader = () => {
                 Report a pool
               </a>
             </Link>
-            <button
-              type="button"
+            <a
+              href="https://github.com/Charlie85270/conflux-pos-pools"
               className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-blue-500 rounded-lg shadow-md hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 "
             >
               ADD MY POOL
-            </button>
+            </a>
           </div>
         </div>
       </nav>
