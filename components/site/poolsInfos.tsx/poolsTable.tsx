@@ -157,6 +157,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
                 <td className="px-5 py-5 text-lg bg-white border-b border-gray-200">
                   <div className="flex items-center">
                     <a
+                      target="_blank"
                       href={pool.link}
                       className="text-blue-500 whitespace-no-wrap hover:underline"
                     >
