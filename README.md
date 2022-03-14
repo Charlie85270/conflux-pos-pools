@@ -23,6 +23,15 @@ Install all dependencies
 
     yarn install
 
+To run the report pool feature in local you'll need to create a github api khey with write right on a github project.
+The report form directly create an issue on the repo with the information of the malicious pool.
+_This is not mandatory to run the project_
+Create a **.env** file at the root of the project with
+
+    NEXT_PUBLIC_GITHUB_KEY={githubApiKeyWithWriteRight}
+    NEXT_PUBLIC_GITHUB_OWNER={ownerOfTheRepo}
+    NEXT_PUBLIC_GITHUB_REPO={nameOfTheRepo}
+
 Start the project
 
     yarn dev

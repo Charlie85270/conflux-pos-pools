@@ -6,10 +6,10 @@ export const octokit = new Octokit({
 export const UseGitHub = () => {
   const reportPool = (pool, cause) => {
     return octokit.request(
-      "POST /repos/Charlie85270/conflux-pos-pools/issues",
+      `POST /repos/${process.env.NEXT_PUBLIC_GITHUB_OWNER}/${process.env.NEXT_PUBLIC_GITHUB_REPO}/issues`,
       {
-        owner: "Charlie85270",
-        repo: "conflux-pos-pools",
+        owner: process.env.NEXT_PUBLIC_GITHUB_OWNER,
+        repo: process.env.NEXT_PUBLIC_GITHUB_REPO,
         title: `Report : ${pool}`,
         body: cause,
       }
