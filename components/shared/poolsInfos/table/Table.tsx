@@ -117,7 +117,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
       name: "Name",
     },
     {
-      name: "Adress",
+      name: "Address",
     },
     {
       name: "Staking Vault",
@@ -154,68 +154,56 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
           {poolsInfo.map((pool, _) => {
             return (
               <tr key={pool.stakerNumber + pool.adress || pool.name}>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200">
+                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900">
                   <div className="flex items-center">
                     {pool.image && <img src={pool.image} className="w-8" />}
                   </div>
                 </td>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200">
+                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900">
                   <div className="flex items-center">
                     <a
                       target="_blank"
                       href={pool.link}
-                      className="text-blue-500 whitespace-no-wrap hover:underline"
+                      className="text-blue-500 whitespace-no-wrap dark:text-blue-400 hover:underline"
                     >
                       {pool.name}
                     </a>
                   </div>
                 </td>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200">
-                  <p className="text-blue-500 whitespace-no-wrap hover:underline">
-                    {!pool.posAddress ? (
-                      Cell(pool.posAddress)
-                    ) : (
-                      <a
-                        target="_blank"
-                        href={`https://confluxscan.io/pos/accounts/${pool.posAddress}`}
-                      >
-                        {pool.posAddress.slice(0, 10)}...
-                      </a>
-                    )}
-                  </p>
-                </td>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200">
-                  {Cell(
-                    pool.totalLocked
-                      ? formatBalance(
-                          BigInt(pool.totalLocked) *
-                            BigInt(ONE_VOTE_CFX) *
-                            BigInt("1000000000000000000")
-                        )
-                      : pool.totalLocked
-                  )}
-                </td>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200">
-                  <p className="text-gray-900 whitespace-no-wrap">
-                    {Cell(formatBalance(pool.totalRevenue))}
-                  </p>
-                </td>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200">
-                  <p className="text-gray-900 whitespace-no-wrap">
-                    {Cell(pool.stakerNumber)}
-                  </p>
-                </td>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200">
-                  <p className="text-gray-900 whitespace-no-wrap">
-                    {Cell(pool.fees ? pool.fees + " %" : pool.fees)}
-                  </p>
-                </td>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200">
-                  <p className="font-bold text-gray-900 whitespace-no-wrap">
-                    {Cell(pool.apy ? pool.apy + " %" : pool.apy)}
-                  </p>
-                </td>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200">
+
+                {!pool.posAddress ? (
+                  Cell(pool.posAddress)
+                ) : (
+                  <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                    <a
+                      className="text-blue-500 whitespace-no-wrap dark:text-blue-400 hover:underline"
+                      target="_blank"
+                      href={`https://confluxscan.io/pos/accounts/${pool.posAddress}`}
+                    >
+                      {pool.posAddress.slice(0, 10)}...
+                    </a>
+                  </td>
+                )}
+
+                {Cell(
+                  pool.totalLocked
+                    ? formatBalance(
+                        BigInt(pool.totalLocked) *
+                          BigInt(ONE_VOTE_CFX) *
+                          BigInt("1000000000000000000")
+                      )
+                    : pool.totalLocked
+                )}
+
+                {Cell(formatBalance(pool.totalRevenue))}
+
+                {Cell(pool.stakerNumber)}
+
+                {Cell(pool.fees ? pool.fees + " %" : pool.fees)}
+
+                {Cell(pool.apy ? pool.apy + " %" : pool.apy)}
+
+                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900">
                   {!!!pool.status ? (
                     Cell(pool.status)
                   ) : (
@@ -227,7 +215,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
           })}
         </tbody>
       </table>
-      <div className="flex flex-col items-center px-5 py-5 bg-white xs:flex-row xs:justify-between">
+      <div className="flex flex-col items-center px-5 py-5 bg-white dark:bg-gray-900 xs:flex-row xs:justify-between">
         <Pagination
           activePage={activePage}
           onPageChange={setActivePage}
@@ -240,12 +228,19 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
 }
 
 const Cell = value => {
+  let node;
+
   if (value === null) {
-    return <span className="text-gray-900 whitespace-no-wrap">--</span>;
+    node = <span className="whitespace-no-wrap">--</span>;
   }
-  return value ? (
-    <span className="text-gray-900 whitespace-no-wrap">{value}</span>
-  ) : (
-    <span className="block w-16 h-6 bg-gray-200 rounded animate-pulse"></span>
+  value
+    ? (node = <span className="whitespace-no-wrap ">{value}</span>)
+    : (node = (
+        <span className="block w-16 h-6 bg-gray-200 rounded animate-pulse"></span>
+      ));
+  return (
+    <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+      <p className="text-gray-900 whitespace-no-wrap dark:text-white">{node}</p>
+    </td>
   );
 };

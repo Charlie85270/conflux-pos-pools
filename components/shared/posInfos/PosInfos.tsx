@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import lodash from "lodash";
 import { reqHomeDashboardOfPOSSummary } from "../../../services/httpReq";
 import { PosCard } from "./PosCard";
 import { formatBalance, formatTimeStamp } from "../../../utils";
@@ -17,8 +16,10 @@ export function PosInfos({ timestamp = 1 }: { timestamp?: number }) {
 
   return (
     <div>
-      <h2 className="my-4 text-2xl">Conflux PoS stats</h2>
-      <div className="p-6 bg-white rounded-lg shadow dark:bg-gray-800">
+      <h2 className="my-2 text-lg font-bold text-black dark:text-white">
+        Conflux PoS stats
+      </h2>
+      <div className="p-6 bg-white rounded-lg shadow dark:bg-gray-900">
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
           <PosCard
             icon="node"
@@ -40,7 +41,7 @@ export function PosInfos({ timestamp = 1 }: { timestamp?: number }) {
             icon="percent"
             title="APY"
             value={
-              lodash.isNil(POSSummaryInfo.apy)
+              !!!POSSummaryInfo.apy
                 ? "--"
                 : String(POSSummaryInfo.apy).substr(0, 4) + "%"
             }

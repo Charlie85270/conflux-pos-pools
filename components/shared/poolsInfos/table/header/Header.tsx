@@ -16,18 +16,20 @@ export const TableHeader = ({ headers, sort, setSort }: HeaderProps) => {
           <th
             key={head.name + index}
             scope="col"
-            className="p-6 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200"
+            className="p-6 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
           >
             {head.name}
             {head.key &&
               (head.key === sort?.key ? (
                 <button
+                  className="dark:text-white"
                   onClick={() =>
                     setSort(sort.sort === "DESC" ? "ASC" : "DESC", head.key)
                   }
                 >
                   {sort.sort === "DESC" ? (
                     <svg
+                      fill="currentColor"
                       className="w-3 h-3"
                       xmlns="http://www.w3.org/2000/svg"
                       width="512px"
@@ -38,6 +40,7 @@ export const TableHeader = ({ headers, sort, setSort }: HeaderProps) => {
                     </svg>
                   ) : (
                     <svg
+                      fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg"
                       width="10px"
                       height="10px"
@@ -51,6 +54,7 @@ export const TableHeader = ({ headers, sort, setSort }: HeaderProps) => {
               ) : (
                 <button onClick={() => setSort("ASC", head.key)}>
                   <svg
+                    fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                     width="12px"
                     height="12px"

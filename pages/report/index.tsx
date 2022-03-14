@@ -32,7 +32,7 @@ export const ReportPage = () => {
       desc="Find the best Pool / Validator to stake your CFX token on Conflux Network"
     >
       {success || poolError ? (
-        <div className="w-full max-w-2xl px-5 py-10 m-auto mt-10 bg-white rounded-lg shadow dark:bg-gray-800">
+        <div className="w-full max-w-2xl px-5 py-10 m-auto mt-10 bg-white rounded-lg shadow dark:bg-gray-900">
           <p className={`${success ? "text-green-600" : "text-red-600"}`}>
             {success || poolError}
           </p>
@@ -43,7 +43,7 @@ export const ReportPage = () => {
           onSubmit={e => submit(e)}
           noValidate
         >
-          <div className="w-full max-w-2xl px-5 py-10 m-auto mt-10 bg-white rounded-lg shadow dark:bg-gray-800">
+          <div className="w-full max-w-2xl px-5 py-10 m-auto mt-10 bg-white rounded-lg shadow dark:bg-gray-900">
             <div className="mb-6 text-3xl font-light text-center text-gray-800 dark:text-white">
               Report a pool
             </div>

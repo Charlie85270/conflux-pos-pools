@@ -9,14 +9,14 @@ export const PoolAlert = ({ pool }: PoolAlertProps) => {
     <div className="flex items-center ">
       <span
         className={`relative inline-block mr-2 text-sm px-3 py-1 font-semibold leading-tight ${
-          pool.status === "Active" ? "text-green-900" : "text-red-900"
+          pool.status === "Active" ? "text-green-500" : "text-red-500"
         }`}
       >
         <span
           aria-hidden="true"
           className={`absolute inset-0 ${
             pool.status === "Active" ? "bg-green-200" : "bg-red-200"
-          } rounded-full opacity-50`}
+          } rounded-full`}
         ></span>
         <span className="relative">{pool.status}</span>
       </span>
