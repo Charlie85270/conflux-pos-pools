@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 
 const AppHeader = () => {
   const { theme, setTheme } = useTheme();
-  console.log(theme);
+
   return (
     <header className="relative z-50 flex-none w-full px-4 mx-auto text-sm font-medium leading-6 text-gray-700 bg-white shadow dark:bg-gray-900 lg:px-0">
       <nav aria-label="Global" className="py-4 mx-auto max-w-7xl">
@@ -20,14 +20,14 @@ const AppHeader = () => {
             <g
               id="Page-1"
               stroke="none"
-              stroke-width="1"
+              strokeWidth="1"
               fill="none"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             >
               <g
                 id="Conflux_Logo_Mark_Color"
                 transform="translate(0.000000, -0.000000)"
-                fill-rule="nonzero"
+                fillRule="nonzero"
               >
                 <polygon
                   id="Path"

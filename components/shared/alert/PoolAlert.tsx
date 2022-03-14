@@ -34,7 +34,7 @@ export const PoolAlert = ({ pool }: PoolAlertProps) => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 clip-rule="evenodd"
                 d="M11.6787 1.72497L8.8724 0.166748L6.06605 1.72497L2.97984 2.60752L2.09728 5.69374L0.539062 8.50008L2.09728 11.3064L2.97984 14.3926L6.06605 15.2752L8.8724 16.8334L11.6787 15.2752L14.765 14.3926L15.6475 11.3064L17.2057 8.50008L15.6475 5.69374L14.765 2.60752L11.6787 1.72497ZM12.9614 6.65501C13.3231 6.23766 13.278 5.6061 12.8607 5.24439C12.4433 4.88268 11.8117 4.9278 11.45 5.34515L7.8724 9.4732L6.29475 7.65284C5.93304 7.23549 5.30149 7.19038 4.88413 7.55208C4.46678 7.91379 4.42166 8.54535 4.78337 8.9627L7.11671 11.655C7.30665 11.8742 7.58238 12.0001 7.8724 12.0001C8.16241 12.0001 8.43814 11.8742 8.62809 11.655L12.9614 6.65501Z"
                 fill="#3861FB"
@@ -59,14 +59,14 @@ export const PoolAlert = ({ pool }: PoolAlertProps) => {
               <g
                 id="Page-1"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g
                   id="Conflux_Logo_Mark_Color"
                   transform="translate(0.000000, -0.000000)"
-                  fill-rule="nonzero"
+                  fillRule="nonzero"
                 >
                   <polygon
                     id="Path"
