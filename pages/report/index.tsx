@@ -1,7 +1,6 @@
 import { FormEvent, useState } from "react";
 import AppLayout from "../../components/layout/AppLayout";
 import pools from "../../pools.json";
-import { Octokit } from "octokit";
 import { UseGitHub } from "../../hooks/useGithub";
 
 export const ReportPage = () => {
@@ -9,13 +8,11 @@ export const ReportPage = () => {
   const [cause, setCause] = useState("");
   const [poolError, setPoolError] = useState("");
   const [success, setSuccess] = useState("");
-  const [causeError, setCauseError] = useState("");
+
   const { reportPool } = UseGitHub();
   const submit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!cause || !pool) {
-      setCauseError("Pool and cause are mandatory");
-    }
+
     reportPool(pool, cause)
       .then(_ => {
         setSuccess("Your request has been send to the app maintainer.");
@@ -48,7 +45,7 @@ export const ReportPage = () => {
         >
           <div className="w-full max-w-2xl px-5 py-10 m-auto mt-10 bg-white rounded-lg shadow dark:bg-gray-800">
             <div className="mb-6 text-3xl font-light text-center text-gray-800 dark:text-white">
-              Report a pool {success} {poolError}
+              Report a pool
             </div>
             <div className="grid max-w-xl grid-cols-2 gap-4 m-auto">
               <div className="col-span-2 lg:col-span-1">

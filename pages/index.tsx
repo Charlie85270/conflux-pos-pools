@@ -1,6 +1,6 @@
 import AppLayout from "../components/layout/AppLayout";
-import { PoolsInfo } from "../components/site/poolsInfos.tsx/poolsInfo";
-import { PosInfos } from "../components/site/posInfos/posInfos";
+import { PoolsInfo } from "../components/shared/poolsInfos/PoolsInfo";
+import { PosInfos } from "../components/shared/posInfos/PosInfos";
 
 export const IndexPage = () => {
   return (

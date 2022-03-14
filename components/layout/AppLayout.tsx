@@ -1,6 +1,6 @@
-import Meta from "../site/Meta";
-import AppHeader from "../site/header/AppHeader";
-import { Footer } from "../site/footer/footer";
+import Meta from "../shared/Meta";
+import AppHeader from "./header/AppHeader";
+import { Footer } from "./footer/Footer";
 
 interface Props {
   title: string;

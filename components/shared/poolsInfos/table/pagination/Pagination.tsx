@@ -1,5 +1,5 @@
 import React from "react";
-import pools from "../../../pools.json";
+import pools from "../../../../../pools.json";
 
 export interface PaginationProps {
   pageSize: number;
