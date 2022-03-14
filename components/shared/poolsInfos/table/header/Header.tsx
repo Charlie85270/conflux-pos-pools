@@ -16,7 +16,7 @@ export const TableHeader = ({ headers, sort, setSort }: HeaderProps) => {
           <th
             key={head.name + index}
             scope="col"
-            className="p-6 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+            className="p-6 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
           >
             {head.name}
             {head.key &&

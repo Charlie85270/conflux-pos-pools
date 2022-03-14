@@ -154,12 +154,12 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
           {poolsInfo.map((pool, _) => {
             return (
               <tr key={pool.stakerNumber + pool.adress || pool.name}>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800">
                   <div className="flex items-center">
                     {pool.image && <img src={pool.image} className="w-8" />}
                   </div>
                 </td>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800">
                   <div className="flex items-center">
                     <a
                       target="_blank"
@@ -174,7 +174,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
                 {!pool.posAddress ? (
                   Cell(pool.posAddress)
                 ) : (
-                  <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                  <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800">
                     <a
                       className="text-blue-500 whitespace-no-wrap dark:text-blue-400 hover:underline"
                       target="_blank"
@@ -203,7 +203,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
 
                 {Cell(pool.apy ? pool.apy + " %" : pool.apy)}
 
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800">
                   {!!!pool.status ? (
                     Cell(pool.status)
                   ) : (
@@ -215,7 +215,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
           })}
         </tbody>
       </table>
-      <div className="flex flex-col items-center px-5 py-5 bg-white dark:bg-gray-900 xs:flex-row xs:justify-between">
+      <div className="flex flex-col items-center px-5 py-5 bg-white dark:bg-gray-800 xs:flex-row xs:justify-between">
         <Pagination
           activePage={activePage}
           onPageChange={setActivePage}
@@ -239,7 +239,7 @@ const Cell = value => {
         <span className="block w-16 h-6 bg-gray-200 rounded animate-pulse"></span>
       ));
   return (
-    <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+    <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800">
       <p className="text-gray-900 whitespace-no-wrap dark:text-white">{node}</p>
     </td>
   );

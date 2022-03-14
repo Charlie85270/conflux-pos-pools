@@ -6,7 +6,7 @@ const AppHeader = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="relative z-50 flex-none w-full px-4 mx-auto text-sm font-medium leading-6 text-gray-700 bg-white shadow dark:bg-gray-900 lg:px-0">
+    <header className="relative z-50 flex-none w-full px-4 mx-auto text-sm font-medium leading-6 text-gray-700 bg-white shadow dark:bg-gray-800 lg:px-0">
       <nav aria-label="Global" className="py-4 mx-auto max-w-7xl">
         <div className="flex flex-wrap items-center justify-start w-full dark:text-white md:justify-between">
           <svg

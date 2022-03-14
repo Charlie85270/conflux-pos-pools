@@ -19,7 +19,7 @@ export function PosInfos({ timestamp = 1 }: { timestamp?: number }) {
       <h2 className="my-2 text-lg font-bold text-black dark:text-white">
         Conflux PoS stats
       </h2>
-      <div className="p-6 bg-white rounded-lg shadow dark:bg-gray-900">
+      <div className="p-6 bg-white rounded-lg shadow dark:bg-gray-800">
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
           <PosCard
             icon="node"
