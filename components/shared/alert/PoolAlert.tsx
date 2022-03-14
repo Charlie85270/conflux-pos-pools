@@ -44,14 +44,14 @@ export const PoolAlert = ({ pool }: PoolAlertProps) => {
         )}
 
         {pool.trusted && (
-          <div className="tooltip">
+          <div className="tooltip dark:text-white">
             <span className="tooltiptext">
               This pool is used by Conflux team members
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
+              width="20"
+              height="20"
               viewBox="0 0 199 245"
               version="1.1"
             >
@@ -70,7 +70,7 @@ export const PoolAlert = ({ pool }: PoolAlertProps) => {
                 >
                   <polygon
                     id="Path"
-                    fill="#1A1A1A"
+                    fill="currentColor"
                     points="151.057838 145.949662 98.7961863 198.210803 69.7103803 169.125338 121.972032 116.863685 98.7291726 93.6209957 22.9712333 169.376384 98.5203077 244.923077 174.276376 169.167689"
                   />
                   <polygon

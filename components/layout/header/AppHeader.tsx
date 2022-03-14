@@ -8,11 +8,43 @@ const AppHeader = () => {
   return (
     <header className="relative z-50 flex-none w-full px-4 mx-auto text-sm font-medium leading-6 text-gray-700 bg-white shadow dark:bg-gray-900 lg:px-0">
       <nav aria-label="Global" className="py-4 mx-auto max-w-7xl">
-        <div className="flex flex-wrap items-center justify-start w-full md:justify-between">
-          <img src="/images/conflux.png" className="w-12"></img>
+        <div className="flex flex-wrap items-center justify-start w-full dark:text-white md:justify-between">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 199 245"
+            version="1.1"
+          >
+            <title>Conflux_Logo_Mark_Color</title>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <g
+                id="Conflux_Logo_Mark_Color"
+                transform="translate(0.000000, -0.000000)"
+                fill-rule="nonzero"
+              >
+                <polygon
+                  id="Path"
+                  fill="currentColor"
+                  points="151.057838 145.949662 98.7961863 198.210803 69.7103803 169.125338 121.972032 116.863685 98.7291726 93.6209957 22.9712333 169.376384 98.5203077 244.923077 174.276376 169.167689"
+                />
+                <polygon
+                  id="Path"
+                  fill="#38A1DB"
+                  points="197.693744 98.7101231 98.9858316 9.56888949e-05 0 98.9860017 0.31563441 145.252991 98.5658906 47.0051607 197.528761 145.971262"
+                />
+              </g>
+            </g>
+          </svg>
           <Link href="/">
-            <a className="text-xl text-black dark:text-gray-100 hover:text-gray-800 dark:hover:text-white">
-              <span className="text-3xl font-bold text-blue-500">Conflux</span>{" "}
+            <a className="ml-2 text-xl text-black dark:text-gray-100 hover:text-gray-800 dark:hover:text-white">
+              <span className="text-3xl font-bold text-blue-950">Conflux</span>{" "}
               PoS Validators
             </a>
           </Link>
@@ -25,7 +57,7 @@ const AppHeader = () => {
             </Link>
             <a
               href="https://github.com/Charlie85270/conflux-pos-pools"
-              className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-blue-500 rounded-lg shadow-md hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 "
+              className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md bg-blue-950 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 "
             >
               ADD MY POOL
             </a>

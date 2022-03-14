@@ -12,4 +12,13 @@ module.exports = {
   future: {
     purgeLayersByDefault: true,
   },
+  theme: {
+    extend: {
+      colors: {
+        blue: {
+          950: '#38A1DB',
+        },
+      }
+    },
+  },
 };
