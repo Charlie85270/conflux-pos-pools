@@ -47,7 +47,7 @@ const Meta = ({ pageTitle, description }: Props) => {
 
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@RealCryptoEggs" />
+      <meta name="twitter:site" content="@toBedefined" />
       <meta property="og:title" content={`${pageTitle}`} />
       <meta property="og:url" content={`${url}${path}`} />
       <link rel="canonical" href={`${url}${path}`} />
@@ -55,17 +55,14 @@ const Meta = ({ pageTitle, description }: Props) => {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@nytimes" />
-      <meta name="twitter:creator" content="@SarahMaslinNir" />
-      <meta name="twitter:title" content="CryptoEggs Club | NFT" />
+      <meta name="twitter:site" content="@toBedefined" />
+      <meta name="twitter:creator" content="@toBedefined" />
+      <meta name="twitter:title" content="Conflux PoS validators" />
       <meta
         name="twitter:description"
         content="Welcome to the eggs club. Get your own egg to be ready for the metaverse on the club."
       />
-      <meta
-        name="twitter:image"
-        content="http://thecryptoeggs.com/images/twitterBan.png"
-      />
+      <meta name="twitter:image" content="http://ToBeDefined" />
     </Head>
   );
 };
