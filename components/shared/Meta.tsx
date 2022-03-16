@@ -10,7 +10,7 @@ interface Props {
 const Meta = ({ pageTitle, description }: Props) => {
   const router = useRouter();
 
-  const url = "www.conflux-pos-validators.com";
+  const url = "https://www.conflux-pos-validators.com";
   const path = router.asPath;
 
   return (
