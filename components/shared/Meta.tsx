@@ -60,7 +60,7 @@ const Meta = ({ pageTitle, description }: Props) => {
       <meta name="twitter:title" content="Conflux PoS validators" />
       <meta
         name="twitter:description"
-        content="Welcome to the eggs club. Get your own egg to be ready for the metaverse on the club."
+        content="Find the best Pool / Validator to stake your CFX token on Conflux Network."
       />
       <meta name="twitter:image" content="http://ToBeDefined" />
     </Head>
