@@ -2,9 +2,11 @@ import { FormEvent, useState } from "react";
 import AppLayout from "../../components/layout/AppLayout";
 import pools from "../../pools.json";
 import { UseGitHub } from "../../hooks/useGithub";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const ReportPage = () => {
   const [pool, setPool] = useState("");
+  const [captcha, setCaptcha] = useState("");
   const [cause, setCause] = useState("");
   const [poolError, setPoolError] = useState("");
   const [success, setSuccess] = useState("");
@@ -23,7 +25,11 @@ export const ReportPage = () => {
   };
 
   const isInvalid = () => {
-    return !(pool && cause);
+    return !(pool && cause && captcha);
+  };
+
+  const onCaptchaChange = value => {
+    setCaptcha(value);
   };
 
   return (
@@ -57,7 +63,11 @@ export const ReportPage = () => {
                   >
                     <option value="">Select a pool</option>
                     {pools.map(pool => {
-                      return <option value={pool.link}>{pool.name}</option>;
+                      return (
+                        <option key={pool.name} value={pool.link}>
+                          {pool.name}
+                        </option>
+                      );
                     })}
                   </select>
                 </div>
@@ -79,6 +89,10 @@ export const ReportPage = () => {
                   ></textarea>
                 </label>
               </div>
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_CAPTCHA_KEY}
+                onChange={onCaptchaChange}
+              />
               <div className="col-span-2 text-right">
                 <button
                   disabled={isInvalid()}

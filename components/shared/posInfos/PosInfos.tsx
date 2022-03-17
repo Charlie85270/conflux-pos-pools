@@ -34,11 +34,14 @@ export function PosInfos({ timestamp = 1 }: { timestamp?: number }) {
 
           <PosCard
             icon="token"
+            tooltip="Historical Interest is the total of CFX earned by stakers with the PoS staking on Conflux"
             title="Historical Interest"
             value={formatBalance(POSSummaryInfo.totalPosRewardDrip)}
           />
           <PosCard
             icon="percent"
+            tooltip="The existing base staking rate is 4%, and the PoS staking reward is added to this with a plus factor. Let x=CFX total circulation / CFX total staking, and the additional coefficient be √x.
+When the amount of staking is 1/4 of the circulation, the reward rate is 8%; When the amount of staking is 1/9 of the circulation, the reward rate is 12%; And so on. When the total number of votes cast is relatively low, those who vote will benefit more."
             title="APY"
             value={
               !!!POSSummaryInfo.apy
@@ -57,6 +60,7 @@ export function PosInfos({ timestamp = 1 }: { timestamp?: number }) {
             value={POSSummaryInfo.latestVoted}
           />
           <PosCard
+            link="https://confluxscan.io/pos"
             icon="bloc"
             title="Latest Interest Distribution Block"
             value={POSSummaryInfo.lastDistributeBlock}

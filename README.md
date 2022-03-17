@@ -54,7 +54,7 @@ The file contain a array with all existing pool, to add your pool you'll need 4 
 - The image of the pool (icon display on the table, not mandatory)
 - The link of the pool
 
-Exemple :
+Example :
 
     {
     "name": "Test Pool",

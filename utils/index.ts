@@ -1,6 +1,7 @@
 import BigNumber from "bignumber.js";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import SDK from "js-conflux-sdk/dist/js-conflux-sdk.umd.min.js";
 
 dayjs.extend(relativeTime);
 
@@ -234,4 +235,73 @@ export const replaceAll = (str: string, find: string, replace) => {
     new RegExp(find.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&"), "g"),
     replace
   );
+};
+
+/**
+ * Verify is an address is the zero address
+ * @param address the address cto check
+ * @returns
+ */
+export function isZeroAddress(address: string): boolean {
+  try {
+    // @todo, wait for sdk upgrade to accept both base32 and hex address
+    return SDK.address.isZeroAddress(formatAddress(address, "hex"));
+  } catch (e) {
+    return false;
+  }
+}
+
+export const isCfxHexAddress = (address: string): boolean => {
+  try {
+    return SDK.address.isValidCfxHexAddress(address);
+  } catch (e) {
+    return false;
+  }
+};
+
+export const formatAddress = (
+  address: string,
+  outputType = "base32" // base32 or hex
+): string => {
+  // return input address as default value if it can not convert to conflux chain base32/hex format
+  // if necessary, check for errors at the call site
+  const invalidAddressReturnValue = address;
+  try {
+    if (isCfxHexAddress(address)) {
+      if (outputType === "hex") {
+        return address;
+      } else if (outputType === "base32") {
+        return SDK.format.address(address, 1029);
+      } else {
+        return invalidAddressReturnValue;
+      }
+    } else if (isBase32Address(address)) {
+      if (outputType === "hex") {
+        return SDK.format.hexAddress(address);
+      } else if (outputType === "base32") {
+        const reg = /(.*):(.*):(.*)/;
+        let lowercaseAddress = address;
+
+        // compatibility with verbose address, will replace with simply address later
+        if (typeof address === "string" && reg.test(address)) {
+          lowercaseAddress = address.replace(reg, "$1:$3").toLowerCase();
+        }
+        return lowercaseAddress;
+      } else {
+        return invalidAddressReturnValue;
+      }
+    } else {
+      return invalidAddressReturnValue;
+    }
+  } catch (e) {
+    return invalidAddressReturnValue;
+  }
+};
+
+export const isBase32Address = (address: string): boolean => {
+  try {
+    return SDK.address.isValidCfxAddress(address);
+  } catch (e) {
+    return false;
+  }
 };

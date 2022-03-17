@@ -24,7 +24,8 @@ export const PoolAlert = ({ pool }: PoolAlertProps) => {
         {pool.verified && (
           <div className="tooltip">
             <span className="tooltiptext">
-              The contract of this pool has been verified on Conflux Scan
+              The contract and the implementation of this pool has been verified
+              on Conflux Scan
             </span>
             <svg
               width="20"
@@ -42,12 +43,33 @@ export const PoolAlert = ({ pool }: PoolAlertProps) => {
             </svg>
           </div>
         )}
-
+        {pool.isZero && (
+          <div className="text-gray-500 tooltip dark:text-white">
+            <span className="tooltiptext">
+              The admin addreess is the Zero address
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              id="Layer_1"
+              width="18"
+              fill="currentColor"
+              x="0px"
+              y="0px"
+              viewBox="0 0 330 330"
+            >
+              <g id="XMLID_504_">
+                <path
+                  id="XMLID_505_"
+                  d="M65,330h200c8.284,0,15-6.716,15-15V145c0-8.284-6.716-15-15-15h-15V85c0-46.869-38.131-85-85-85   S80,38.131,80,85v45H65c-8.284,0-15,6.716-15,15v170C50,323.284,56.716,330,65,330z M207.481,219.356l-42.5,42.5   c-2.929,2.929-6.768,4.394-10.606,4.394s-7.678-1.465-10.606-4.394l-21.25-21.25c-5.858-5.858-5.858-15.354,0-21.213   c5.857-5.858,15.355-5.858,21.213,0l10.644,10.643l31.894-31.893c5.857-5.858,15.355-5.858,21.213,0   C213.34,204.002,213.34,213.498,207.481,219.356z M110,85c0-30.327,24.673-55,55-55s55,24.673,55,55v45H110V85z"
+                />
+              </g>
+            </svg>
+          </div>
+        )}
         {pool.trusted && (
           <div className="tooltip dark:text-white">
-            <span className="tooltiptext">
-              This pool is used by Conflux team members
-            </span>
+            <span className="tooltiptext">Well-known pool</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

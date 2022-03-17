@@ -5,7 +5,7 @@ const checkStatus = response => {
   ) {
     return response;
   } else {
-    console.log("rror");
+    console.log("error");
   }
 };
 
