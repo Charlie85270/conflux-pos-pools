@@ -15,7 +15,7 @@ export function PoolsInfo() {
           fill="currentColor"
           height="24"
           width="24"
-          className="w-16"
+          className="w-16 md:w-8"
           viewBox="0 0 24 24"
           color="neutral4"
         >
