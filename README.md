@@ -63,7 +63,7 @@ Example :
     "link": "http://test-pools/"
     }
 
-To add your pool you simply need to add your pools informations at the end of the file pools.json (in the array).
+To add your pool you simply need to add your pools informations at the end of the file pools.json (in the array). If your pool is trsuted by the conflux team (the team will verify this information) you can add **"trusted": true** on the declaration of the configuration of your node.
 That's it !
 All others informations (APY, STAKER, TVL, ....) are directly fetch from the blockchain !
 
