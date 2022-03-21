@@ -1,4 +1,9 @@
 export const Footer = () => {
+  const confluxLink = "https://confluxnetwork.org/en/";
+  const confluxForumLink = "https://forum.conflux.fun/";
+  const confluxScanLink = "https://confluxscan.io/";
+  const githubRepoLink = "https://github.com/Charlie85270/conflux-pos-pools";
+  const creditLink = "https://github.com/Charlie85270";
   return (
     <footer className="px-3 py-8 text-gray-500 transition-colors duration-200 bg-white dark:bg-gray-800 text-2 dark:text-gray-200">
       <div className="flex flex-col">
@@ -8,7 +13,7 @@ export const Footer = () => {
             <a
               aria-current="page"
               target="_blank"
-              href="https://confluxnetwork.org/en/"
+              href={confluxLink}
               className="hover:text-gray-700 dark:hover:text-white"
             >
               Conflux
@@ -16,7 +21,7 @@ export const Footer = () => {
             <a
               aria-current="page"
               target="_blank"
-              href="https://forum.conflux.fun/"
+              href={confluxForumLink}
               className="hover:text-gray-700 dark:hover:text-white"
             >
               Conflux Forum
@@ -24,7 +29,7 @@ export const Footer = () => {
             <a
               aria-current="page"
               target="_blank"
-              href="https://confluxscan.io/"
+              href={confluxScanLink}
               className="hover:text-gray-700 dark:hover:text-white"
             >
               Conflux Scan
@@ -35,7 +40,7 @@ export const Footer = () => {
             <a
               target="_blank"
               className="hover:text-primary-gray-20"
-              href="https://github.com/Charlie85270/conflux-pos-pools"
+              href={githubRepoLink}
             >
               <span className="sr-only">View on GitHub</span>
               <svg
@@ -57,7 +62,7 @@ export const Footer = () => {
               Created by{" "}
               <a
                 className="underline hover:text-primary-gray-20"
-                href="https://github.com/Charlie85270"
+                href={creditLink}
               >
                 Charlie
               </a>
