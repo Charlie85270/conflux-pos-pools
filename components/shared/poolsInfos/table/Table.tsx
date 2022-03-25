@@ -167,8 +167,8 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
           {poolsInfo.map((pool, _) => {
             return (
               <tr key={pool.stakerNumber + pool.adress || pool.name}>
-                <td className="px-5 py-5 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800">
-                  <div className="flex items-center">
+                <td className="pl-4 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800">
+                  <div className="relative flex items-center">
                     {pool.image && <img src={pool.image} className="w-8" />}
                   </div>
                 </td>
