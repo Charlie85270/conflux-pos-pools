@@ -46,7 +46,7 @@ export const PoolAlert = ({ pool }: PoolAlertProps) => {
         {pool.isZero && (
           <div className="text-gray-500 tooltip dark:text-white">
             <span className="tooltiptext">
-              The admin addrees is the Zero address
+              The admin address is the zero address
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
