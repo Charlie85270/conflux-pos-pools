@@ -23,7 +23,7 @@ export function PoolsInfo() {
         </svg>
         <div className="flex flex-col">
           <p className="dark:text-gray-400">
-            This list is not maintained by the Conflux team. We recommand all
+            This list is not maintained by the Conflux team. We recommend all
             users to do their own research and understand the risks before
             joining a pool
           </p>

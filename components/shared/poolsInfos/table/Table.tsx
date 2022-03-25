@@ -238,7 +238,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
                         <a
                           className="flex items-center gap-2 text-sm text-blue-500 whitespace-no-wrap dark:text-blue-400 hover:underline"
                           target="_blank"
-                          href={`https://confluxscan.io/pos/accounts/${pool.owner}`}
+                          href={`https://confluxscan.io/address/${pool.owner}`}
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
