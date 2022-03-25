@@ -19,7 +19,7 @@ main {
   background-color: black;
   color: #fff;
   text-align: center;
-  padding: 5px 0;
+  padding: 10px;
   border-radius: 6px;
   /* Position the tooltip text - see examples below! */
   position: absolute;
@@ -30,4 +30,12 @@ main {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+@media screen and (max-width: 600px) {
+  .tooltip .tooltiptext {
+    width: 250px;
+    left: -160px;
+    top: 30px;
+  }
 }
