@@ -44,19 +44,19 @@ const Meta = ({ pageTitle, description }: Props) => {
       <meta name="theme-color" content="#ffffff"></meta>
 
       <meta name="image" property="og:image" content={`${url}/banner.png`} />
-
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@toBedefined" />
       <meta property="og:title" content={`${pageTitle}`} />
       <meta property="og:url" content={`${url}${path}`} />
       <link rel="canonical" href={`${url}${path}`} />
-      <meta name="monetization" content="$ilp.uphold.com/GidKX3giK2m2" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@toBedefined" />
-      <meta name="twitter:creator" content="@toBedefined" />
+      <meta name="twitter:creator" content="@nickbilton" />
+      <meta
+        property="og:image"
+        content="https://www.conflux-pos-validators.com/banner.png"
+      />
+      <meta name="twitter:site" content="@ConfluxPoSPools" />
+      <meta name="twitter:creator" content="@ConfluxPoSPools" />
       <meta name="twitter:title" content="Conflux PoS validators" />
       <meta
         name="twitter:description"
