@@ -13,16 +13,16 @@
     "link": "https://pos.webomatic.fi/"
   },
   {
-    "name": "Concensus pool",
+    "name": "Consensus pool",
     "adress": "cfx:acgx4fjs0knk1yfughrbyxgb3g1f0rgz82e7xnvm10",
     "image": "https://gspos.club/favicon.ico",
-    "link": "https://gspos.club/pool/0x8d3d150eb2569bd0b031da1a4cc1c9ae5b34d5f6"
+    "link": "https://gspos.club"
   },
   {
     "name": "ABC pool",
     "adress": "cfx:accpx9uxky39pg1hzav757vdej95w1kbcp13d0hvm7",
     "image": "https://confluxpos.cn/favicon.ico",
-    "link": "https://confluxpos.cn/pool/0x84c9fe134d33f61ae7a823ddf623223fb95d2113"
+    "link": "https://confluxpos.cn"
   },
   {
     "name": "HydraSF",
