@@ -272,7 +272,11 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
                     : pool.totalLocked
                 )}
 
-                {Cell(formatBalance(pool.totalRevenue))}
+                {Cell(
+                  pool.totalRevenue
+                    ? formatBalance(pool.totalRevenue)
+                    : pool.totalRevenue
+                )}
 
                 {Cell(pool.stakerNumber)}
 
@@ -311,12 +315,14 @@ const Cell = value => {
 
   if (value === null) {
     node = <span className="whitespace-no-wrap">--</span>;
+  } else {
+    value
+      ? (node = <span className="whitespace-no-wrap ">{value}</span>)
+      : (node = (
+          <span className="block w-16 h-6 bg-gray-200 rounded animate-pulse"></span>
+        ));
   }
-  value
-    ? (node = <span className="whitespace-no-wrap ">{value}</span>)
-    : (node = (
-        <span className="block w-16 h-6 bg-gray-200 rounded animate-pulse"></span>
-      ));
+
   return (
     <td className="px-5 py-5 text-lg text-center bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800">
       <p className="text-gray-900 whitespace-no-wrap dark:text-white">{node}</p>
