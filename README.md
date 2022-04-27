@@ -1,5 +1,8 @@
 # Conflux Pos Validators list
 
+![banner](https://user-images.githubusercontent.com/34569321/165640430-18e91628-9aa1-42f2-9baf-582a0ea762e4.png)
+
+
 Conflux-pools is an application that lists the staking pools on the conflux network.
 Conflux is a layer-1 blockchain, you can find all information about conflux here :
 This application is not official and has not been created by the conflux team, but it has received a grant from them: https://forum.conflux.fun/t/conflux-pools-validators-list/13856/9
