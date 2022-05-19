@@ -22,7 +22,8 @@
     "name": "ABC pool",
     "adress": "cfx:accpx9uxky39pg1hzav757vdej95w1kbcp13d0hvm7",
     "image": "https://confluxpos.cn/favicon.ico",
-    "link": "https://confluxpos.cn"
+    "link": "https://confluxpos.cn",
+     "trusted": true
   },
   {
     "name": "HydraSF",
