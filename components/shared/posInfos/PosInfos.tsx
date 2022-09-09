@@ -8,7 +8,7 @@ export function PosInfos({ timestamp = 1 }: { timestamp?: number }) {
 
   useEffect(() => {
     reqHomeDashboardOfPOSSummary()
-      .then(res => setPOSSummaryInfo(res))
+      .then(res => setPOSSummaryInfo(res.data))
       .catch(e => {
         console.error("get pos homepage summary info error: ", e);
       });
