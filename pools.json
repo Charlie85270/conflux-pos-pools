@@ -71,5 +71,11 @@
     "adress": "cfx:acdmgjnam0kmtnnnwhz4mh727akfxj7fg2gy3bamw6",
     "image": "https://scan-icons.oss-cn-hongkong.aliyuncs.com/mainnet/cfx%3Aacbh1a67t82386g8yu5u895pytx93hbwsyktky4fdd.png",
     "link": "https://v2.artii.cc/pool"
+  },
+  {
+    "name": "Arctic Pool",
+    "adress": "cfx:acdh4uhdck553fzunxvw2y42snwa6gcmyyyw29h6y0",
+    "image": "https://conflux-pos.com/favicon.ico",
+    "link": "https://conflux-pos.com/"
   }
 ]
