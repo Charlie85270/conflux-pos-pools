@@ -83,5 +83,11 @@
     "adress": "cfx:acce7v2gtay09dkk1a13uz5e2g145kcgvy4bym7ft9",
     "image": "https://www.parfinex.com/favicon.ico",
     "link": "https://www.parfinex.com"
+  },
+  {
+    "name": "Nucleon",
+    "adress": "cfx:accvn0sakfx8zv2r0192au3khy7bh9c5f2w5cp18mt",
+    "image": "https://www.nucleon.space/static/yuan.4ce4912b.png",
+    "link": "https://www.nucleon.space/"
   }
 ]
