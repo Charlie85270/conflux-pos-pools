@@ -66,7 +66,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
         const adr = await contract.posAddress();
         const account = await conflux.pos.getAccount(format.hex(adr));
 
-        const status = account.status;
+        const status = account?.status;
         // @ts-ignore
         const poolSummary = await contract.poolSummary();
         // @ts-ignore
@@ -95,14 +95,16 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
         };
 
         setPoolsInfos([...newPools]);
-      } catch (_) {
+      } catch (error) {
+        console.error(`[ERROR] Pool ${pool.name} : ${error}`);
+
         newPools[index] = {
           ...pool,
           totalLocked: null,
           totalRevenue: null,
           verified: false,
           fees: null,
-          posAddress: null,
+          posAddress: undefined,
           apy: null,
           stakerNumber: null,
           status: "Inactive",
