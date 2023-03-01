@@ -1,12 +1,18 @@
 import { format } from "js-conflux-sdk";
 import React, { useEffect, useState } from "react";
 import { UseConflux } from "../../../../hooks/useConflux";
-import { formatBalance, isZeroAddress } from "../../../../utils";
+import {
+  formatBalance,
+  getAbi,
+  getCustomPoolsInfos,
+  isZeroAddress,
+} from "../../../../utils";
 import { Pagination } from "./pagination/Pagination";
 import { abi } from "../../../../abi";
 import { reqContract } from "../../../../services/httpReq";
 import { PoolAlert } from "../../alert/PoolAlert";
 import { TableHeader } from "./header/Header";
+import { getPoolsInfos } from "../../../../utils/contractInfos";
 
 const ONE_VOTE_CFX = 1000;
 const pageSize = 50;
@@ -22,11 +28,12 @@ export interface PoolsInfosApi {
   fees?: number | null;
   posAddress?: string;
   owner?: string;
-  adress?: string;
+  adress: string;
   link: string;
   abi?: any;
   image?: string;
   trusted?: boolean;
+  customContract?: string;
 }
 export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
   const [activePage, setActivePage] = useState(1);
@@ -46,54 +53,46 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
     setPoolsInfos(newPools);
 
     newPools.forEach(async (pool, index) => {
+      const { conflux } = UseConflux();
       try {
-        const { conflux } = UseConflux();
         const contract = conflux.Contract({
-          abi: abi,
+          abi: await getAbi(newPools[index].customContract),
           address: newPools[index].adress,
         });
+        console.log("nooooon");
+        const {
+          owner,
+          contractInfo,
+          isZero,
+          fees,
+          adr,
 
-        // @ts-ignore
-        const owner = await contract.owner();
-
-        const contractInfo = await reqContract(newPools[index].adress);
-
-        const isZero = isZeroAddress(contractInfo.admin);
-        // @ts-ignore
-        const fees = await contract.poolUserShareRatio();
-
-        // @ts-ignore
-        const adr = await contract.posAddress();
-        const account = await conflux.pos.getAccount(format.hex(adr));
-
-        const status = account?.status;
-        // @ts-ignore
-        const poolSummary = await contract.poolSummary();
-        // @ts-ignore
-        const apy = await contract.poolAPY();
-        // @ts-ignore
-        const staker = await contract.stakerNumber();
+          status,
+          posAddress,
+          verified,
+          totalLocked,
+          totalRevenue,
+          apy,
+          staker,
+        } = await getPoolsInfos(newPools[index], contract, conflux);
 
         newPools[index] = {
           ...pool,
-          verified:
-            (contractInfo?.verify?.exactMatch &&
-              contractInfo?.implementation?.verify?.exactMatch) ||
-            false,
-          totalLocked: poolSummary[0],
-          posAddress: format.hex(adr),
+          verified,
+          totalLocked,
+          posAddress,
           isZero,
-          totalRevenue: poolSummary[2],
+          totalRevenue,
           owner,
-          fees: (10000 - Number(fees)) / 100,
-          apy: Number(apy) / 100,
-          stakerNumber: staker[0],
+          fees,
+          apy,
+          stakerNumber: staker,
           status:
-            status.availableVotes && status.availableVotes > 0
+            status?.availableVotes && status.availableVotes > 0
               ? "Active"
               : "Inactive",
         };
-
+        console.log("ouuuuui");
         setPoolsInfos([...newPools]);
       } catch (error) {
         console.error(`[ERROR] Pool ${pool.name} : ${error}`);
@@ -109,7 +108,6 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
           stakerNumber: null,
           status: "Inactive",
         };
-        setPoolsInfos([...newPools]);
       }
     });
   }, [activePage]);

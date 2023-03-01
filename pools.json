@@ -72,12 +72,7 @@
     "image": "https://scan-icons.oss-cn-hongkong.aliyuncs.com/mainnet/cfx%3Aacbh1a67t82386g8yu5u895pytx93hbwsyktky4fdd.png",
     "link": "https://v2.artii.cc/pool"
   },
-  {
-    "name": "Arctic Pool",
-    "adress": "cfx:acdh4uhdck553fzunxvw2y42snwa6gcmyyyw29h6y0",
-    "image": "https://conflux-pos.com/favicon.ico",
-    "link": "https://conflux-pos.com/"
-  },
+
   {
     "name": "Parfinex Meta",
     "adress": "cfx:acce7v2gtay09dkk1a13uz5e2g145kcgvy4bym7ft9",
@@ -88,6 +83,7 @@
     "name": "Nucleon",
     "adress": "cfx:accvn0sakfx8zv2r0192au3khy7bh9c5f2w5cp18mt",
     "image": "https://www.nucleon.space/static/yuan.4ce4912b.png",
-    "link": "https://www.nucleon.space/"
+    "link": "https://www.nucleon.space/",
+    "customContract": "Nucleon"
   }
 ]
