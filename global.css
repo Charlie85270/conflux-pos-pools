@@ -24,6 +24,7 @@ main {
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
+  bottom:0px;
   right: 30px;
 }
 
