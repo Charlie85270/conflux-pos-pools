@@ -27,14 +27,14 @@
   {
     "name": "HydraSF",
     "adress": "cfx:acgwp9vmrp7rfd5keg2x69a8y88aw84uc2paasu7cu",
-    "image": "https://cfxmint.club/HydraSF-logo.ico",
-    "link": "https://cfxmint.club/"
+    "image": "https://hydrasf.club/favicon.ico",
+    "link": "https://hydrasf.club/"
   },
   {
     "name": "Hydragon",
     "adress": "cfx:acbpre1k49wyat9aew0dk8syz6du53c8bjjvs141mf",
-    "image": " https://hydrasf.club/favicon.ico",
-    "link": " https://hydrasf.club/"
+    "image": "https://www.hydragon.fun/favicon.ico",
+    "link": "https://www.hydragon.fun/"
   },
   {
     "name": "CuanMax",
@@ -72,7 +72,12 @@
     "image": "https://scan-icons.oss-cn-hongkong.aliyuncs.com/mainnet/cfx%3Aacbh1a67t82386g8yu5u895pytx93hbwsyktky4fdd.png",
     "link": "https://v2.artii.cc/pool"
   },
-
+  {
+    "name": "Arctic Pool",
+    "adress": "cfx:acdh4uhdck553fzunxvw2y42snwa6gcmyyyw29h6y0",
+    "image": "https://conflux-pos.com/favicon.ico",
+    "link": "https://conflux-pos.com/"
+  },
   {
     "name": "Parfinex Meta",
     "adress": "cfx:acce7v2gtay09dkk1a13uz5e2g145kcgvy4bym7ft9",
@@ -83,8 +88,6 @@
     "name": "Nucleon",
     "adress": "cfx:accvn0sakfx8zv2r0192au3khy7bh9c5f2w5cp18mt",
     "image": "https://www.nucleon.space/static/yuan.4ce4912b.png",
-    "link": "https://www.nucleon.space/",
-    "customContract": "Nucleon",
-    "posAddress": "0x92ba044ffdf81232b5ac4ae8f2bfefe45c1607d896d81ac4a354d66c32c773a4"
+    "link": "https://www.nucleon.space/"
   }
 ]
