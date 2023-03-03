@@ -70,4 +70,68 @@ To add your pool you simply need to add your pools informations at the end of th
 That's it !
 All others informations (APY, STAKER, TVL, ....) are directly fetch from the blockchain !
 
+
+## Add a custom pool
+
+Most pools use the basic contracts provided by the Conflux team and are therefore automatically supported by the application. It can happen that some pools use custom contracts, like for example Nucleon (Liquid Staking). 
+In these cases, in order for the application to display correctly the data of your pool, it is necessary to add the custom implementation of the pool in order to find the data on and off chain. 
+
+1) add the `customContract` field to your pool in the pools.json file, with the ID of your pool. For example here for Nucleon : 
+  
+
+Example :
+
+    {
+    "name": "Nucleon",
+    "adress": "cfx:accvn0sakfx8zv2r0192au3khy7bh9c5f2w5cp18mt",
+    "image": "https://www.nucleon.space/static/yuan.4ce4912b.png",
+    "link": "https://www.nucleon.space/",
+    "customContract": "Nucleon",
+    "posAddress": "0x92ba044ffdf81232b5ac4ae8f2bfefe45c1607d896d81ac4a354d66c32c773a4"
+    }
+
+As you can see, we can add other values if needed (here the PoS address of the pool which is not recoverable onchain). 
+
+
+2) Create a new folder (named with the ID previously added on the pools.json) on the `customAbi` folder.
+
+3) Create a file on the new created folder and name it `abi.ts`. Inside the file export a const named `abi` which contain the abi of your Pool contract (you can follow the Nucleon exemple here `customAbi/Nucleon/abi.ts`)  
+
+4) in the file `utils/contractInfos.ts`, you will find the implementation of the data on and off chain recuperation for each pool. 
+The `getGenericPoolInfos` function retrieves all the informations for pools which use the contracts provided by Conflux.
+You will need to create a custom function, called `get${NameOfYourPool}PoolInfos`, for exemple for Nucleon the function is `getNucleonPoolInfos`
+
+This custom function will manage the data recuperation of your pool. One thing is important, the function must return an object containing the following fields: 
+
+- owner (the address of the owner of the pool)
+- isZero (if the owner of the pool is the zero address)
+- fees (the fees of the pool in %)
+- verified (if the contract if verified on conflux scan)
+- posAddress (The PoS address of the pool)
+- account (The account linked to the pool)
+- status (The status of the pool)
+- totalRevenue (Total rewards of the pool)
+- totalLocked (Total CFX locked on the pool)
+- apy (The APY of the Pool in %)
+- poolSummary (Summary of the pool)
+- staker (The number of staker on the pool)
+
+These informations will be displayed on the home page of the application
+
+You can follow the example already present for the Nucleon pool  (function `getNucleonPoolInfos`). 
+
+The last thing to do is to call your function in the `getPoolsInfos` method, adding a case in the swtich, indicating the ID of your pool previously added in the pools.json file.
+
+Example for Nucleon :
+
+    case "Nucleon":
+      data = await getNucleonPoolInfos(pool, contract, conflux);
+      break;
+
+
+The implementation in your custom method is free, you can do what you want (Call API, onChain retrieval, ...).
+
+
+
+
 Don't hesitate to contribute to improve this open source project.
