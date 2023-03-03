@@ -1,7 +1,10 @@
 import BigNumber from "bignumber.js";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import { Contract } from "js-conflux-sdk";
 import SDK from "js-conflux-sdk/dist/js-conflux-sdk.umd.min.js";
+import { abi } from "../abi";
+import { getNucleonPoolInfos } from "./contractInfos";
 
 dayjs.extend(relativeTime);
 
@@ -304,4 +307,22 @@ export const isBase32Address = (address: string): boolean => {
   } catch (e) {
     return false;
   }
+};
+
+/**
+ * Return the abi corresponding to the pool
+ * @param poolName
+ * @returns
+ */
+export const getAbi = async poolName => {
+  if (poolName) {
+    const { abi } = await import(`../customAbi/${poolName}/abi`, {
+      assert: {
+        type: "json",
+      },
+    });
+
+    return abi;
+  }
+  return abi;
 };
