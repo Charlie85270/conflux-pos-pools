@@ -321,8 +321,7 @@ export const getAbi = async poolName => {
         type: "json",
       },
     });
-    console.log("custom");
-    console.log(abi);
+
     return abi;
   }
   return abi;

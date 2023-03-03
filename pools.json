@@ -84,6 +84,7 @@
     "adress": "cfx:accvn0sakfx8zv2r0192au3khy7bh9c5f2w5cp18mt",
     "image": "https://www.nucleon.space/static/yuan.4ce4912b.png",
     "link": "https://www.nucleon.space/",
-    "customContract": "Nucleon"
+    "customContract": "Nucleon",
+    "posAddress": "0x92ba044ffdf81232b5ac4ae8f2bfefe45c1607d896d81ac4a354d66c32c773a4"
   }
 ]

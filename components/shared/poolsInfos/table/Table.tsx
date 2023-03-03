@@ -59,7 +59,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
           abi: await getAbi(newPools[index].customContract),
           address: newPools[index].adress,
         });
-        console.log("nooooon");
+
         const {
           owner,
           contractInfo,
@@ -92,7 +92,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
               ? "Active"
               : "Inactive",
         };
-        console.log("ouuuuui");
+
         setPoolsInfos([...newPools]);
       } catch (error) {
         console.error(`[ERROR] Pool ${pool.name} : ${error}`);

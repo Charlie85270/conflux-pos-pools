@@ -1,7 +1,6 @@
 import { Contract } from "js-conflux-sdk";
 import { format } from "js-conflux-sdk";
 import { isZeroAddress } from ".";
-import { PoolsInfosApi } from "../components/shared/poolsInfos/table/table";
 import { reqContract } from "../services/httpReq";
 
 interface PoolInfos {
@@ -26,6 +25,7 @@ export const getPoolsInfos = async (
   contract: Contract,
   conflux
 ): Promise<PoolInfos> => {
+  // Default data for all pool
   let data: PoolInfos = {
     apy: "0",
     contractInfo: undefined,
@@ -33,7 +33,7 @@ export const getPoolsInfos = async (
     isZero: false,
     owner: undefined,
     poolSummary: undefined,
-    posAddress: undefined,
+    posAddress: "",
     staker: "0",
     status: "",
     totalLocked: undefined,
@@ -43,6 +43,10 @@ export const getPoolsInfos = async (
     verified: false,
   };
 
+  /**
+   * To add a custom pool add a entry on the switch with the id of your pool
+   * and create a 'getMyPoolInfos' function which implement the recuperation of the data
+   */
   switch (pool.customContract) {
     case "Nucleon":
       data = await getNucleonPoolInfos(pool, contract, conflux);
@@ -54,36 +58,48 @@ export const getPoolsInfos = async (
   return data;
 };
 
+/**
+ *
+ * [CLASSIC POS POOLS]
+ *
+ * Method to get PoS Pool on-chain data
+ *
+ * @param pool
+ * @param contract
+ * @param conflux
+ * @returns
+ */
 export const getGenericPoolInfos = async (
   pool,
-  contract: Contract,
+  contract,
   conflux
 ): Promise<PoolInfos> => {
-  // @ts-ignore
+  // Owner of the contract
   const owner = await contract.owner();
-
+  // Informations of the contract
   const contractInfo = await reqContract(pool.adress);
-
+  // If owner of the contract is the zero address
   const isZero = isZeroAddress(contractInfo.admin);
-
+  // Fees of the pool
   const fees = await contract.poolUserShareRatio();
-
-  // @ts-ignore
+  // PoS address of the pool
   const adr = await contract.posAddress();
+  // Account linked to the pool
   const account = await conflux.pos.getAccount(format.hex(adr));
-
+  // Status of the pool
   const status = account?.status;
-  // @ts-ignore
+  // Summary of the pool
   const poolSummary = await contract.poolSummary();
-  // @ts-ignore
+  // Apy of the pool
   const apy = await contract.poolAPY();
-  // @ts-ignore
+  // Number of staker on the pool
   const staker = await contract.stakerNumber();
-
+  // If contract is verified on ConfluxScan
   const verified =
     (contractInfo?.data.verify?.exactMatch &&
       contractInfo?.data.implementation?.verify?.exactMatch) ||
     false;
+  // Hex PoS address
   const posAddress = format.hex(adr);
 
   return {
@@ -104,43 +120,48 @@ export const getGenericPoolInfos = async (
   };
 };
 
+/**
+ *
+ * [NUCLEON]
+ *
+ * Custom method to get Nucleon PoS Pool liquid data
+ * This function get and return the custom data from Nucleon Pool
+ * Nucleon is a liquid staking solution so the implementation of the contract is different from a basic pool
+ *
+ *
+ * @param pool
+ * @param contract
+ * @param conflux
+ * @returns
+ */
 export const getNucleonPoolInfos = async (
   pool,
-  contract: Contract,
+  contract,
   conflux
 ): Promise<PoolInfos> => {
+  // Owner of the contract
   const owner = await contract.owner();
-
-  // @ts-ignore
-
+  // Infos of the contract
   const contractInfo = await reqContract(pool.adress);
-
+  // If the owner of the contract is the zero address
   const isZero = isZeroAddress(contractInfo.data.admin);
-  // @ts-ignore
+  // Fees of the pool
   const fees = 10;
-
-  // @ts-ignore
-  //   const adr = await contract.posAddress();
-  //   const account = await conflux.pos.getAccount(format.hex(adr));
-  const status = undefined;
-  //const status = account?.status;
-  // @ts-ignore
+  // Account linked to the pool
+  const account = await conflux.pos.getAccount(format.hex(pool.posAddress));
+  // Status of the pool
+  const status = account?.status;
+  // Summary of the pool
   const poolSummary = await contract.poolSummary();
-
-  // @ts-ignore
-  //   const apy = await contract.poolAPY();
-  //   // @ts-ignore
-  //   const staker = await contract.stakerNumber();
+  // If the contract isVerified on ConfluxScan
   const verified =
     (contractInfo?.data.verify?.exactMatch &&
       contractInfo?.data.implementation?.verify?.exactMatch) ||
     false;
+  // TODO: Get theses informations from Nucleon API
+  const staker = 276;
+  const apy = "18.66";
 
-  const pools = await contract._poolRegisted();
-  console.log("charlie", pools);
-
-  const staker = 0;
-  const apy = "";
   return {
     owner,
     contractInfo,
@@ -148,7 +169,8 @@ export const getNucleonPoolInfos = async (
     fees,
     adr: undefined,
     verified,
-    account: undefined,
+    posAddress: pool.posAddress,
+    account,
     status,
     totalRevenue: poolSummary[5] + poolSummary[6],
     totalLocked: poolSummary[0],
