@@ -159,16 +159,14 @@ export const getNucleonPoolInfos = async (
       contractInfo?.data.implementation?.verify?.exactMatch) ||
     false;
   // TODO: Get theses informations from Nucleon API
-  const staker = 276;
-  const apy = "18.66";
 
-  // const stakerData = await fetch(
-  //   "https://mainapi.nucleon.network/api/v1/totalstakers"
-  // );
-  // const apyData = await fetch("https://mainapi.nucleon.network/api/v1/apy");
+  // const stakerData = await fetch("api/totalstakers");
+  // const apyData = await fetch("api/apy");
+  const responseAPY = await fetch("/api/nucleonAPY");
+  const responseStaker = await fetch("/api/nucleonStaker");
+  const apy = await responseAPY.json();
+  const staker = await responseStaker.json();
 
-  // console.log(stakerData);
-  // console.log(apyData);
   return {
     owner,
     contractInfo,
