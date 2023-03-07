@@ -162,6 +162,13 @@ export const getNucleonPoolInfos = async (
   const staker = 276;
   const apy = "18.66";
 
+  const stakerData = await fetch(
+    "https://mainapi.nucleon.network/api/v1/totalstakers"
+  );
+  const apyData = await fetch("https://mainapi.nucleon.network/api/v1/apy");
+
+  console.log(stakerData);
+  console.log(apyData);
   return {
     owner,
     contractInfo,
