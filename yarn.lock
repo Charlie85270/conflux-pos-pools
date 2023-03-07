@@ -90,6 +90,11 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@netlify/next@^1.4.4":
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@netlify/next/-/next-1.4.4.tgz#b9c050aacc22c4d20daff078b7d007610b771cfa"
+  integrity sha512-C6jpUHhq5bkjJ/Ic9vLegnJ938+BfCgP5MPoSstjjCMzgXBdCCnDk5nK1BWji5ccxBxlYwpHYPQGFH35WwD6UQ==
+
 "@next/bundle-analyzer@^10.0.4":
   version "10.2.3"
   resolved "https://registry.yarnpkg.com/@next/bundle-analyzer/-/bundle-analyzer-10.2.3.tgz#6526e31f46cd48145986dc3bf911ff693e2acdf7"

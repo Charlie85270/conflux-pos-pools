@@ -6,11 +6,7 @@
     "esModuleInterop": true,
     "outDir": "dist",
     "declaration": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -21,11 +17,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": [
-    "./scripts",
-    "./test"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["./scripts", "./test"],
+  "exclude": ["node_modules"]
 }
