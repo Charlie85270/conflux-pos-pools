@@ -1,4 +1,4 @@
-build]
+[build]
   command = "yarn run build"
   publish = ".next"
 
