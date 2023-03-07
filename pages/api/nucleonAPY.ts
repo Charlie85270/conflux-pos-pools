@@ -20,3 +20,7 @@ const handler = nc()
   });
 
 export default handler;
+
+export const config = {
+  type: "experimental-background",
+};
