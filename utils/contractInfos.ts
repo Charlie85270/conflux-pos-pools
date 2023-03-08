@@ -166,6 +166,12 @@ export const getNucleonPoolInfos = async (
   const responseStaker = await fetch("/api/nucleonStaker");
   const apy = await responseAPY.json();
   const staker = await responseStaker.json();
+  let totalRevenue = 0;
+
+  const dataPool = await fetch(
+    `https://www.confluxscan.io/stat/pos-account-detail?identifier=${pool.posAddress}`
+  );
+  const { data } = await dataPool.json();
 
   return {
     owner,
@@ -177,7 +183,7 @@ export const getNucleonPoolInfos = async (
     posAddress: pool.posAddress,
     account,
     status,
-    totalRevenue: poolSummary[5] + poolSummary[6],
+    totalRevenue: data.totalReward,
     totalLocked: poolSummary[0],
     poolSummary,
     apy,
