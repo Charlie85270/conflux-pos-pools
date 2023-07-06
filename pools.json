@@ -3,7 +3,8 @@
     "name": "PHX V1",
     "address": "cfx:acdj1y1r00mzvuw9s831rj1t5amst2405jv582syu0",
     "link": "https://pospool.phxverse.com/",
-    "image": "https://pospool.phxverse.com/favicon.ico"
+    "image": "https://pospool.phxverse.com/favicon.ico",
+    "trusted": true
   },
   {
     "name": "web-o-matic",
