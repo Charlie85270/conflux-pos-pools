@@ -53,17 +53,17 @@ All static pools informations are in the **pools.json** file in.
 The file contain a array with all existing pool, to add your pool you'll need 4 informations:
 
 - The name of the pool
-- The adress of the pool
+- The address of the pool
 - The image of the pool (icon display on the table, not mandatory)
 - The link of the pool
 
 Example :
 
     {
-    "name": "Test Pool",
-    "adress": "cfx:a77Hsb694ch9k2ppym6v68gzvy6yyUEYes3wndm7m",
-    "image": "http://test-pools/favicon.ico",
-    "link": "http://test-pools/"
+        "name": "Test Pool",
+        "address": "cfx:a77Hsb694ch9k2ppym6v68gzvy6yyUEYes3wndm7m",
+        "image": "http://test-pools/favicon.ico",
+        "link": "http://test-pools/"
     }
 
 To add your pool you simply need to add your pools informations at the end of the file pools.json (in the array). If your pool is trsuted by the conflux team (the team will verify this information) you can add **"trusted": true** on the declaration of the configuration of your node.
@@ -82,12 +82,12 @@ In these cases, in order for the application to display correctly the data of yo
 Example :
 
     {
-    "name": "Nucleon",
-    "adress": "cfx:accvn0sakfx8zv2r0192au3khy7bh9c5f2w5cp18mt",
-    "image": "https://www.nucleon.space/static/yuan.4ce4912b.png",
-    "link": "https://www.nucleon.space/",
-    "customContract": "Nucleon",
-    "posAddress": "0x92ba044ffdf81232b5ac4ae8f2bfefe45c1607d896d81ac4a354d66c32c773a4"
+        "name": "Nucleon",
+        "address": "cfx:accvn0sakfx8zv2r0192au3khy7bh9c5f2w5cp18mt",
+        "image": "https://www.nucleon.space/static/yuan.4ce4912b.png",
+        "link": "https://www.nucleon.space/",
+        "customContract": "Nucleon",
+        "posAddress": "0x92ba044ffdf81232b5ac4ae8f2bfefe45c1607d896d81ac4a354d66c32c773a4"
     }
 
 As you can see, we can add other values if needed (here the PoS address of the pool which is not recoverable onchain). 

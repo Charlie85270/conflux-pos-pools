@@ -1,64 +1,61 @@
 [
   {
-    "name": "PHX POS pool",
-    "adress": "cfx:acdj1y1r00mzvuw9s831rj1t5amst2405jv582syu0",
+    "name": "PHX V1",
+    "address": "cfx:acdj1y1r00mzvuw9s831rj1t5amst2405jv582syu0",
     "link": "https://pospool.phxverse.com/",
-    "image": "https://pospool.phxverse.com/favicon.ico"
+    "image": "https://pospool.phxverse.com/favicon.ico",
+    "trusted": true
   },
   {
     "name": "web-o-matic",
-    "adress": "cfx:acc5086t6uyww6barn1a2b6z8wdmdg376yeu9gczpz",
+    "address": "cfx:acc5086t6uyww6barn1a2b6z8wdmdg376yeu9gczpz",
     "image": "https://pos.webomatic.fi/favicon.ico",
     "link": "https://pos.webomatic.fi/"
   },
   {
     "name": "Consensus pool",
-    "adress": "cfx:acgx4fjs0knk1yfughrbyxgb3g1f0rgz82e7xnvm10",
+    "address": "cfx:acgx4fjs0knk1yfughrbyxgb3g1f0rgz82e7xnvm10",
     "image": "https://gspos.club/favicon.ico",
     "link": "https://gspos.club"
   },
   {
     "name": "ABC pool",
-    "adress": "cfx:accpx9uxky39pg1hzav757vdej95w1kbcp13d0hvm7",
+    "address": "cfx:accpx9uxky39pg1hzav757vdej95w1kbcp13d0hvm7",
     "image": "https://confluxpos.cn/favicon.ico",
     "link": "https://confluxpos.cn"
   },
   {
     "name": "HydraSF",
-    "adress": "cfx:acgwp9vmrp7rfd5keg2x69a8y88aw84uc2paasu7cu",
+    "address": "cfx:acgwp9vmrp7rfd5keg2x69a8y88aw84uc2paasu7cu",
     "image": "https://hydrasf.club/favicon.ico",
     "link": "https://hydrasf.club/"
   },
   {
     "name": "Xiyou Pos Pool",
-    "adress": "cfx:acc3jrzrhujyuyhx2b19hmg2ed8m3852eyfk3sm3rb",
+    "address": "cfx:acc3jrzrhujyuyhx2b19hmg2ed8m3852eyfk3sm3rb",
     "image": "https://pos.xiyou.fi/favicon.ico",
     "link": "https://pos.xiyou.fi/"
   },
   {
-    "name": "Cozak",
-    "adress": "cfx:acfmcjhvgwm3rp1h3d10kuj700ayv9szmjjskkep1s",
-    "image": "https://cozak.space/favicon.ico",
-    "link": "https://cozak.space/"
-  },
-  {
-    "name": "A-Pool",
-    "adress": "cfx:acdmgjnam0kmtnnnwhz4mh727akfxj7fg2gy3bamw6",
-    "image": "https://scan-icons.oss-cn-hongkong.aliyuncs.com/mainnet/cfx%3Aacbh1a67t82386g8yu5u895pytx93hbwsyktky4fdd.png",
-    "link": "https://v2.artii.cc/pool"
-  },
-  {
     "name": "Parfinex Meta",
-    "adress": "cfx:acce7v2gtay09dkk1a13uz5e2g145kcgvy4bym7ft9",
+    "address": "cfx:acce7v2gtay09dkk1a13uz5e2g145kcgvy4bym7ft9",
     "image": "https://www.parfinex.com/favicon.ico",
     "link": "https://www.parfinex.com"
   },
   {
     "name": "Nucleon",
-    "adress": "cfx:accvn0sakfx8zv2r0192au3khy7bh9c5f2w5cp18mt",
+    "address": "cfx:accvn0sakfx8zv2r0192au3khy7bh9c5f2w5cp18mt",
     "image": "https://www.nucleon.space/static/yuan.4ce4912b.png",
     "link": "https://www.nucleon.space/",
     "customContract": "Nucleon",
     "posAddress": "0x92ba044ffdf81232b5ac4ae8f2bfefe45c1607d896d81ac4a354d66c32c773a4"
+  },
+  {
+    "name": "PHX V2",
+    "address": "cfx:acczppb3z0dwnv1jcm5zbzxg9m6z1rjmueb8rajsb0",
+    "image": "https://www.phxverse.com/logo.svg",
+    "link": "https://app.phxverse.com/",
+    "customContract": "PHXV2",
+    "posAddress": "0xbec7e19d019851f49580b6748d00adfb589d42bc0758a5fecaa1bfdc7da46c45"
   }
 ]

@@ -1,10 +1,8 @@
 import BigNumber from "bignumber.js";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { Contract } from "js-conflux-sdk";
 import SDK from "js-conflux-sdk/dist/js-conflux-sdk.umd.min.js";
 import { abi } from "../abi";
-import { getNucleonPoolInfos } from "./contractInfos";
 
 dayjs.extend(relativeTime);
 

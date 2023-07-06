@@ -28,7 +28,7 @@ export interface PoolsInfosApi {
   fees?: number | null;
   posAddress?: string;
   owner?: string;
-  adress: string;
+  address: string;
   link: string;
   abi?: any;
   image?: string;
@@ -57,7 +57,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
       try {
         const contract = conflux.Contract({
           abi: await getAbi(newPools[index].customContract),
-          address: newPools[index].adress,
+          address: newPools[index].address,
         });
 
         const {
@@ -166,7 +166,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
         <tbody>
           {poolsInfo.map((pool, _) => {
             return (
-              <tr key={pool.stakerNumber + pool.adress || pool.name}>
+              <tr key={pool.stakerNumber + pool.address || pool.name}>
                 <td className="pl-4 text-lg bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-800">
                   <div className="relative flex items-center">
                     {pool.image && <img src={pool.image} className="w-8" />}
@@ -208,7 +208,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
                       <a
                         className="flex items-center gap-2 text-sm text-blue-500 whitespace-no-wrap dark:text-blue-400 hover:underline"
                         target="_blank"
-                        href={`https://confluxscan.io/address/${pool.adress}`}
+                        href={`https://confluxscan.io/address/${pool.address}`}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -232,7 +232,7 @@ export function PoolsTable({ pools }: { pools: PoolsInfosApi[] }) {
                             <path d="M256,387.5c-6.8,0-12.3,5.5-12.3,12.3v25.5c-11.5,3.8-20.6,12.9-24.4,24.4H96.8c-6.8,0-12.3,5.5-12.3,12.3   s5.5,12.3,12.3,12.3h122.5c5.1,15.3,19.6,26.4,36.7,26.4c17,0,31.5-11.1,36.7-26.4h122.5c6.8,0,12.3-5.5,12.3-12.3   s-5.5-12.3-12.3-12.3H292.7c-3.8-11.5-12.9-20.6-24.4-24.4v-25.5C268.2,393,262.8,387.5,256,387.5z M256,476.1   c-7.8,0-14.2-6.4-14.2-14.2c0-7.8,6.4-14.2,14.2-14.2c7.8,0,14.2,6.4,14.2,14.2C270.2,469.7,263.8,476.1,256,476.1z" />
                           </g>
                         </svg>
-                        {pool.adress.slice(0, 10)}...
+                        {pool.address.slice(0, 10)}...
                       </a>
                       {pool.owner && (
                         <a

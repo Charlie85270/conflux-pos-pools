@@ -1,5 +1,4 @@
-import { Contract } from "js-conflux-sdk";
-import { format } from "js-conflux-sdk";
+import { Contract, format } from "js-conflux-sdk";
 import { isZeroAddress } from ".";
 import { reqContract } from "../services/httpReq";
 
@@ -51,6 +50,9 @@ export const getPoolsInfos = async (
     case "Nucleon":
       data = await getNucleonPoolInfos(pool, contract, conflux);
       break;
+    case "PHXV2":
+      data = await getPHXV2PoolInfos(pool, contract, conflux);
+      break;
     default:
       data = await getGenericPoolInfos(pool, contract, conflux);
       break;
@@ -77,7 +79,7 @@ export const getGenericPoolInfos = async (
   // Owner of the contract
   const owner = await contract.owner();
   // Informations of the contract
-  const contractInfo = await reqContract(pool.adress);
+  const contractInfo = await reqContract(pool.address);
   // If owner of the contract is the zero address
   const isZero = isZeroAddress(contractInfo.admin);
   // Fees of the pool
@@ -142,7 +144,7 @@ export const getNucleonPoolInfos = async (
   // Owner of the contract
   const owner = await contract.owner();
   // Infos of the contract
-  const contractInfo = await reqContract(pool.adress);
+  const contractInfo = await reqContract(pool.address);
   // If the owner of the contract is the zero address
   const isZero = isZeroAddress(contractInfo.data.admin);
   // Fees of the pool
@@ -190,3 +192,69 @@ export const getNucleonPoolInfos = async (
     staker,
   };
 };
+
+/**
+ *
+ * [PHXV2]
+ *
+ * Custom method to get PHX V2 PoS Pool liquid data
+ * This function get and return the custom data from PHX V2 Pool
+ * PHX V2 is a liquid staking solution so the implementation of the contract is different from a basic pool
+ *
+ *
+ * @param pool
+ * @param contract
+ * @param conflux
+ * @returns
+ */
+export const getPHXV2PoolInfos = async (
+    pool,
+    contract,
+    conflux
+): Promise<PoolInfos> => {
+    // Owner of the contract
+  const owner = await contract.owner();
+  // Infos of the contract
+  const contractInfo = await reqContract(pool.address);
+  // If the owner of the contract is the zero address
+  const isZero = isZeroAddress(contractInfo.data.admin);
+  // Fees of the pool
+  let fees = await contract.poolShareRatio();
+  fees = Number(fees) / 10_000_000;
+  const account = await conflux.pos.getAccount(format.hex(pool.posAddress));
+  // Status of the pool
+  const status = account?.status;
+  // Summary of the pool
+  let poolSummary = await contract.poolSummary();
+  poolSummary = [poolSummary[1], poolSummary[5], poolSummary[4] + poolSummary[5]];
+  const totalRevenue = poolSummary[2];
+  // If the contract isVerified on ConfluxScan
+  const verified =
+    (contractInfo?.data.verify?.exactMatch &&
+      contractInfo?.data.implementation?.verify?.exactMatch) ||
+    false;
+
+  const staker = await contract.stakerNumber();
+
+  let apr = await contract.poolAPR();
+  apr = Number(apr) / 1000_000_000;
+  const PERIOD = 365 * 24; // 1 year period (in hours)
+  let apy = (Math.pow(1 + apr, PERIOD) - 1) * 100;
+
+  return {
+    owner,
+    contractInfo,
+    isZero,
+    fees,
+    adr: pool.posAddress,
+    posAddress: pool.posAddress,
+    verified,
+    account,
+    status,
+    totalRevenue,
+    totalLocked: poolSummary[0],
+    poolSummary,
+    apy,
+    staker,
+  };
+}
