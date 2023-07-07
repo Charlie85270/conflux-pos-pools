@@ -2,7 +2,7 @@
   {
     "name": "PHX V1",
     "address": "cfx:acdj1y1r00mzvuw9s831rj1t5amst2405jv582syu0",
-    "link": "https://pospool.phxverse.com/",
+    "link": "https://pospool.phxverse.com",
     "image": "https://pospool.phxverse.com/favicon.ico"
   },
   {
@@ -52,7 +52,7 @@
   {
     "name": "PHX V2",
     "address": "cfx:acczppb3z0dwnv1jcm5zbzxg9m6z1rjmueb8rajsb0",
-    "image": "https://www.phxverse.com/logo.svg",
+    "image": "https://pospool.phxverse.com/favicon.ico",
     "link": "https://app.phxverse.com/",
     "customContract": "PHXV2",
     "posAddress": "0xbec7e19d019851f49580b6748d00adfb589d42bc0758a5fecaa1bfdc7da46c45"
