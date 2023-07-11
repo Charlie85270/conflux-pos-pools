@@ -56,5 +56,11 @@
     "link": "https://app.phxverse.com/",
     "customContract": "PHXV2",
     "posAddress": "0xbec7e19d019851f49580b6748d00adfb589d42bc0758a5fecaa1bfdc7da46c45"
+  },
+  {
+    "name": "FC Pool",
+    "address": "cfx:acbvy42ajnwz5kzpm5an9yz0uwm04ab2y2huhvvrkn",
+    "image": "https://conflux.fans/favicon.ico",
+    "link": "https://conflux.fans/"    
   }
 ]
