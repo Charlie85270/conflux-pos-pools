@@ -226,7 +226,7 @@ export const getPHXV2PoolInfos = async (
   const status = account?.status;
   // Summary of the pool
   let poolSummary = await contract.poolSummary();
-  poolSummary = [poolSummary[1], poolSummary[5], poolSummary[4] + poolSummary[5]];
+  poolSummary = [poolSummary[1], poolSummary[5], poolSummary[4]];
   const totalRevenue = poolSummary[2];
   // If the contract isVerified on ConfluxScan
   const verified =
