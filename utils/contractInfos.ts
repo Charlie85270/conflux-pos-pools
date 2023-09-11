@@ -238,7 +238,7 @@ export const getPHXV2PoolInfos = async (
 
   let apr = await contract.poolAPR();
   apr = Number(apr) / 1000_000_000;
-  const PERIOD = 365 * 24; // 1 year period (in hours)
+  const PERIOD = 365 * 24 * 2; // 1 year period (in half hours)
   let apy = (Math.pow(1 + apr, PERIOD) - 1) * 100;
   apy = Number(apy.toFixed(2));
 
