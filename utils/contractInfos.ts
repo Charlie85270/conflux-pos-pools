@@ -226,7 +226,7 @@ export const getPHXV2PoolInfos = async (
   const status = account?.status;
   // Summary of the pool
   let poolSummary = await contract.poolSummary();
-  poolSummary = [poolSummary[1], poolSummary[5], poolSummary[4] + poolSummary[5]];
+  poolSummary = [poolSummary[1], poolSummary[5], poolSummary[4]];
   const totalRevenue = poolSummary[2];
   // If the contract isVerified on ConfluxScan
   const verified =
@@ -238,7 +238,7 @@ export const getPHXV2PoolInfos = async (
 
   let apr = await contract.poolAPR();
   apr = Number(apr) / 1000_000_000;
-  const PERIOD = 365 * 24; // 1 year period (in hours)
+  const PERIOD = 365 * 24 * 2; // 1 year period (in half hours)
   let apy = (Math.pow(1 + apr, PERIOD) - 1) * 100;
   apy = Number(apy.toFixed(2));
 
