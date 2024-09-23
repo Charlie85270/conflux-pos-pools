@@ -74,5 +74,11 @@
     "address": "cfx:acgwgh4h5pu04zr9yg8p03acsf10sfrv4umctj7skd",
     "image": "https://app.shui.finance/favicon.ico",
     "link": "https://app.shui.finance/"
+  },
+  {
+    "name": "ABC Pool V2",
+    "address": "cfx:accrdadjnxbx75x5mx6523fajwx3k81b12eugec37v",
+    "image": "https://v2.confluxpos.cn/favicon.ico",
+    "link": "https://v2.confluxpos.cn/"    
   }
 ]
