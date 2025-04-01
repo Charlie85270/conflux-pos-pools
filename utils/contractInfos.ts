@@ -171,7 +171,7 @@ export const getNucleonPoolInfos = async (
   let totalRevenue = 0;
 
   const dataPool = await fetch(
-    `https://www.confluxscan.io/stat/pos-account-detail?identifier=${pool.posAddress}`
+    `https://www.confluxscan.org/stat/pos-account-detail?identifier=${pool.posAddress}`
   );
   const { data } = await dataPool.json();
 

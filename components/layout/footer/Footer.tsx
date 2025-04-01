@@ -1,7 +1,7 @@
 export const Footer = () => {
   const confluxLink = "https://confluxnetwork.org/en/";
   const confluxForumLink = "https://forum.conflux.fun/";
-  const confluxScanLink = "https://confluxscan.io/";
+  const confluxScanLink = "https://confluxscan.org/";
   const githubRepoLink = "https://github.com/Charlie85270/conflux-pos-pools";
   const creditLink = "https://github.com/Charlie85270";
   return (

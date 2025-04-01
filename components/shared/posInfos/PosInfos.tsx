@@ -60,7 +60,7 @@ When the amount of staking is 1/4 of the circulation, the reward rate is 8%; Whe
             value={POSSummaryInfo.latestVoted}
           />
           <PosCard
-            link="https://confluxscan.io/pos"
+            link="https://confluxscan.org/pos"
             icon="bloc"
             title="Latest Interest Distribution Block"
             value={POSSummaryInfo.lastDistributeBlock}
