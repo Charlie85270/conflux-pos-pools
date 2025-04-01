@@ -56,7 +56,7 @@ const AppHeader = () => {
               </a>
             </Link>
             <a
-              href=" https://github.com/Charlie85270/conflux-pos-pools#add-my-pool"
+              href=" https://github.com/phx-verse/conflux-pos-pools#add-my-pool"
               className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md bg-blue-950 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 "
             >
               ADD MY POOL

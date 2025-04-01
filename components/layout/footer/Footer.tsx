@@ -1,9 +1,9 @@
 export const Footer = () => {
   const confluxLink = "https://confluxnetwork.org/en/";
   const confluxForumLink = "https://forum.conflux.fun/";
-  const confluxScanLink = "https://confluxscan.io/";
-  const githubRepoLink = "https://github.com/Charlie85270/conflux-pos-pools";
-  const creditLink = "https://github.com/Charlie85270";
+  const confluxScanLink = "https://confluxscan.org/";
+  const githubRepoLink = "https://github.com/phx-verse/conflux-pos-pools";
+  const creditLink = "https://github.com/phx-verse";
   return (
     <footer className="px-3 py-8 text-gray-500 transition-colors duration-200 bg-white dark:bg-gray-800 text-2 dark:text-gray-200">
       <div className="flex flex-col">
@@ -64,7 +64,7 @@ export const Footer = () => {
                 className="underline hover:text-primary-gray-20"
                 href={creditLink}
               >
-                Charlie
+                PHXVerse
               </a>
             </span>
           </div>

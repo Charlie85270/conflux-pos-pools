@@ -4,7 +4,7 @@ import fetch from "./request";
 export const v1Prefix = "/v1";
 export const statPrefix = "/stat";
 
-const conflux_url = "https://www.confluxscan.io";
+const conflux_url = "https://www.confluxscan.org";
 
 export const sendRequest = config => {
   const url =
