@@ -80,5 +80,11 @@
     "address": "cfx:acgwgh4h5pu04zr9yg8p03acsf10sfrv4umctj7skd",
     "image": "https://app.shui.finance/favicon.ico",
     "link": "https://app.shui.finance/"
+  },
+  {
+    "name": "stakefish",
+    "address": "cfx:acd0evj1a2mgmpvt6abrn13m6esbg2bfspw3k6hsjn",
+    "image": "https://raw.githubusercontent.com/stakefish/eigenlayer-metadata/refs/heads/main/stakefish.png",
+    "link": "https://stake.fish/"
   }
 ]
