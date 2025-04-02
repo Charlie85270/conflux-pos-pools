@@ -24,7 +24,7 @@
     "link": "https://gspos.club"
   },
   {
-    "name": "ABC pool",
+    "name": "ABC Pool V1",
     "address": "cfx:accpx9uxky39pg1hzav757vdej95w1kbcp13d0hvm7",
     "image": "https://confluxpos.cn/favicon.ico",
     "link": "https://confluxpos.cn"
@@ -74,6 +74,12 @@
     "address": "cfx:achb1yjn27wsndsafx927c3xaems88bkzp9pdkvrbw",
     "image": "https://www.cflpool.io/favicon.ico",
     "link": "https://www.cflpool.io/"
+  },
+  {
+    "name": "ABC Pool V2",
+    "address": "cfx:accrdadjnxbx75x5mx6523fajwx3k81b12eugec37v",
+    "image": "https://v2.confluxpos.cn/favicon.ico",
+    "link": "https://v2.confluxpos.cn/"
   },
   {
     "name": "SHUI Pool",
