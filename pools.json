@@ -1,11 +1,5 @@
 [
   {
-    "name": "Validation Cloud",
-    "address": "cfx:achduvbt35zb7ge3fwsjm6ryc6gk76ab5uk4nsc8u9",
-    "link": "https://www.validationcloud.io",
-    "image": "https://img.cryptorank.io/coins/validation_cloud1709120618541.png"
-  },
-  {
     "name": "PHX V1",
     "address": "cfx:acdj1y1r00mzvuw9s831rj1t5amst2405jv582syu0",
     "link": "https://pospool.phxverse.com",
@@ -48,12 +42,6 @@
     "link": "https://app.phxverse.com/",
     "customContract": "PHXV2",
     "posAddress": "0xbec7e19d019851f49580b6748d00adfb589d42bc0758a5fecaa1bfdc7da46c45"
-  },
-  {
-    "name": "FC Pool",
-    "address": "cfx:acbvy42ajnwz5kzpm5an9yz0uwm04ab2y2huhvvrkn",
-    "image": "https://conflux.fans/favicon.ico",
-    "link": "https://conflux.fans/"    
   },
   {
     "name": "SHUI Pool",
