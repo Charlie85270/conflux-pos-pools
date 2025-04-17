@@ -1,11 +1,5 @@
 [
   {
-    "name": "Validation Cloud",
-    "address": "cfx:achduvbt35zb7ge3fwsjm6ryc6gk76ab5uk4nsc8u9",
-    "link": "https://www.validationcloud.io",
-    "image": "https://img.cryptorank.io/coins/validation_cloud1709120618541.png"
-  },
-  {
     "name": "PHX V1",
     "address": "cfx:acdj1y1r00mzvuw9s831rj1t5amst2405jv582syu0",
     "link": "https://pospool.phxverse.com",
@@ -42,38 +36,12 @@
     "link": "https://pos.xiyou.fi/"
   },
   {
-    "name": "Parfinex Meta",
-    "address": "cfx:acce7v2gtay09dkk1a13uz5e2g145kcgvy4bym7ft9",
-    "image": "https://www.parfinex.com/favicon.ico",
-    "link": "https://www.parfinex.com"
-  },
-  {
-    "name": "Nucleon",
-    "address": "cfx:accvn0sakfx8zv2r0192au3khy7bh9c5f2w5cp18mt",
-    "image": "https://www.nucleon.space/static/yuan.4ce4912b.png",
-    "link": "https://www.nucleon.space/",
-    "customContract": "Nucleon",
-    "posAddress": "0x92ba044ffdf81232b5ac4ae8f2bfefe45c1607d896d81ac4a354d66c32c773a4"
-  },
-  {
     "name": "PHX V2",
     "address": "cfx:acczppb3z0dwnv1jcm5zbzxg9m6z1rjmueb8rajsb0",
     "image": "https://pospool.phxverse.com/favicon.ico",
     "link": "https://app.phxverse.com/",
     "customContract": "PHXV2",
     "posAddress": "0xbec7e19d019851f49580b6748d00adfb589d42bc0758a5fecaa1bfdc7da46c45"
-  },
-  {
-    "name": "FC Pool",
-    "address": "cfx:acbvy42ajnwz5kzpm5an9yz0uwm04ab2y2huhvvrkn",
-    "image": "https://conflux.fans/favicon.ico",
-    "link": "https://conflux.fans/"    
-  },
-  {
-    "name": "CFL Pool",
-    "address": "cfx:achb1yjn27wsndsafx927c3xaems88bkzp9pdkvrbw",
-    "image": "https://www.cflpool.io/favicon.ico",
-    "link": "https://www.cflpool.io/"
   },
   {
     "name": "SHUI Pool",
@@ -86,5 +54,11 @@
     "address": "cfx:acd0evj1a2mgmpvt6abrn13m6esbg2bfspw3k6hsjn",
     "image": "https://raw.githubusercontent.com/stakefish/eigenlayer-metadata/refs/heads/main/stakefish.png",
     "link": "https://stake.fish/"
+  },
+  {
+    "name": "Validation Cloud",
+    "address": "cfx:achduvbt35zb7ge3fwsjm6ryc6gk76ab5uk4nsc8u9",
+    "link": "https://www.validationcloud.io",
+    "image": "https://img.cryptorank.io/coins/validation_cloud1709120618541.png"
   }
 ]

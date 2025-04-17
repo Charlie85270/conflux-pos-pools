@@ -106,3 +106,4 @@ dist
 
 build/*
 .DS_Store
+tmp.json
