@@ -171,7 +171,7 @@ export const getNucleonPoolInfos = async (
   let totalRevenue = 0;
 
   const dataPool = await fetch(
-    `https://www.confluxscan.io/stat/pos-account-detail?identifier=${pool.posAddress}`
+    `https://www.confluxscan.org/stat/pos-account-detail?identifier=${pool.posAddress}`
   );
   const { data } = await dataPool.json();
 
@@ -238,7 +238,7 @@ export const getPHXV2PoolInfos = async (
 
   let apr = await contract.poolAPR();
   apr = Number(apr) / 1000_000_000;
-  const PERIOD = 365 * 24 * 2; // 1 year period (in half hours)
+  const PERIOD = 365 * 24; // 1 year period (in one hours)
   let apy = (Math.pow(1 + apr, PERIOD) - 1) * 100;
   apy = Number(apy.toFixed(2));
 
