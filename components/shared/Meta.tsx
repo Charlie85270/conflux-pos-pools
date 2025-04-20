@@ -10,7 +10,7 @@ interface Props {
 const Meta = ({ pageTitle, description }: Props) => {
   const router = useRouter();
 
-  const url = "https://www.conflux-pos-validators.com";
+  const url = "https://www.conflux-pos-validators.org";
   const path = router.asPath;
 
   return (
@@ -53,7 +53,7 @@ const Meta = ({ pageTitle, description }: Props) => {
       <meta name="twitter:creator" content="@nickbilton" />
       <meta
         property="og:image"
-        content="https://www.conflux-pos-validators.com/banner.png"
+        content="https://www.conflux-pos-validators.org/banner.png"
       />
       <meta name="twitter:site" content="@ConfluxPoSPools" />
       <meta name="twitter:creator" content="@ConfluxPoSPools" />
@@ -64,7 +64,7 @@ const Meta = ({ pageTitle, description }: Props) => {
       />
       <meta
         name="twitter:image"
-        content="https://www.conflux-pos-validators.com/banner.png"
+        content="https://www.conflux-pos-validators.org/banner.png"
       />
     </Head>
   );
